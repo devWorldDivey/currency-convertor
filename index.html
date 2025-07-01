@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remittance Comparator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Remittance Comparator</h1>
+        <p>Dubai (AED) to India (INR)</p>
+
+        <div class="widget live-rate-widget">
+            <h2>Live Mid-Market Rate (For Comparison)</h2>
+            <div id="live-rate-display">
+                <span class="loader"></span>
+            </div>
+            <div id="mid-market-value-display"></div>
+            <p class="rate-info">This is the real rate. The "Real Cost" below shows how much each service costs compared to this benchmark.</p>
+        </div>
+
+        <div class="input-section">
+            <label for="aedAmount">Amount to Send (AED)</label>
+            <input type="number" id="aedAmount" value="10000" placeholder="e.g., 10000">
+        </div>
+
+        <div class="comparison-grid">
+            <div class="service-card" id="wise">
+                <h3 class="service-name">Wise</h3>
+                <div class="service-inputs">
+                    <label>Exchange Rate (1 AED = ? INR)</label>
+                    <input type="number" class="exchange-rate" step="0.0001" value="22.6626">
+                    <label>Fee (in AED)</label>
+                    <input type="number" class="fee" step="0.01" value="36.83">
+                    <div class="tax-field">
+                        <label>Tax on Fee (AED)</label>
+                        <input type="number" class="tax" step="0.01">
+                        <div class="auto-vat">
+                            <input type="checkbox" class="vat-checkbox" checked>
+                            <label>Auto-calc 5% VAT</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-result">
+                    <p>Recipient Gets: <span class="final-inr">0</span> INR</p>
+                </div>
+                <div class="real-cost">
+                    <p>Real Cost: <span class="cost-inr">...</span> INR</p>
+                </div>
+            </div>
+
+            <div class="service-card" id="remitly">
+                <h3 class="service-name">Remitly</h3>
+                 <div class="service-inputs">
+                    <label>Exchange Rate (1 AED = ? INR)</label>
+                    <input type="number" class="exchange-rate" step="0.0001" value="22.55">
+                    <label>Fee (in AED)</label>
+                    <input type="number" class="fee" step="0.01" value="7.00">
+                    <div class="tax-field">
+                        <label>Tax on Fee (AED)</label>
+                        <input type="number" class="tax" step="0.01">
+                        <div class="auto-vat">
+                            <input type="checkbox" class="vat-checkbox" checked>
+                            <label>Auto-calc 5% VAT</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-result">
+                    <p>Recipient Gets: <span class="final-inr">0</span> INR</p>
+                </div>
+                <div class="real-cost">
+                    <p>Real Cost: <span class="cost-inr">...</span> INR</p>
+                </div>
+            </div>
+
+            <div class="service-card" id="wu">
+                <h3 class="service-name">Western Union</h3>
+                 <div class="service-inputs">
+                    <label>Exchange Rate (1 AED = ? INR)</label>
+                    <input type="number" class="exchange-rate" step="0.01" value="22.56">
+                    <label>Fee (in AED)</label>
+                    <input type="number" class="fee" step="0.01" value="9.90">
+                    <div class="tax-field">
+                        <label>Tax on Fee (AED)</label>
+                        <input type="number" class="tax" step="0.01">
+                        <div class="auto-vat">
+                            <input type="checkbox" class="vat-checkbox" checked>
+                            <label>Auto-calc 5% VAT</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-result">
+                    <p>Recipient Gets: <span class="final-inr">0</span> INR</p>
+                </div>
+                 <div class="real-cost">
+                    <p>Real Cost: <span class="cost-inr">...</span> INR</p>
+                </div>
+            </div>
+            
+            <div class="service-card" id="enbd">
+                <h3 class="service-name">Emirates NBD</h3>
+                 <div class="service-inputs">
+                    <label>Exchange Rate (1 AED = ? INR)</label>
+                    <input type="number" class="exchange-rate" step="0.01" placeholder="Check app for live rate">
+                    <label>Fee (in AED)</label>
+                    <input type="number" class="fee" step="0.01" value="0">
+                    <div class="tax-field">
+                        <label>Tax on Fee (AED)</label>
+                        <input type="number" class="tax" step="0.01">
+                        <div class="auto-vat">
+                            <input type="checkbox" class="vat-checkbox" checked>
+                            <label>Auto-calc 5% VAT</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-result">
+                    <p>Recipient Gets: <span class="final-inr">0</span> INR</p>
+                </div>
+                 <div class="real-cost">
+                    <p>Real Cost: <span class="cost-inr">...</span> INR</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+	</div>
+    </div>
+
+    <footer>
+        <p>Made by Divey Anand</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</body>
+</html>

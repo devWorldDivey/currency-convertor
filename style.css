@@ -1,0 +1,105 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+h1 { color: #1c1e21; }
+.widget {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 0 auto 20px auto;
+    max-width: 800px;
+}
+.live-rate-widget {
+    background-color: #e6f7ff;
+    border-left: 5px solid #007bff;
+    text-align: center;
+}
+#live-rate-display {
+    font-size: 1.5rem; /* Adjusted size */
+    font-weight: 600;
+    color: #004085;
+    margin-bottom: 10px;
+}
+/* --- NEW STYLE for Benchmark Value --- */
+#mid-market-value-display {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#mid-market-value-display strong {
+    color: #004085;
+    font-size: 1.4rem;
+}
+
+.rate-info { font-size: 0.9rem; color: #666; margin: 0; }
+.loader { display: inline-block; border: 4px solid #f3f3f3; border-radius: 50%; border-top: 4px solid #3498db; width: 20px; height: 20px; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.input-section { padding: 20px; border-radius: 8px; margin-bottom: 30px; background: transparent; box-shadow: none; }
+.input-section label { display: block; margin-bottom: 10px; font-size: 1.2rem; font-weight: 500; }
+#aedAmount { font-size: 1.8rem; padding: 10px; width: 300px; text-align: center; border: 1px solid #ccc; border-radius: 5px; }
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+.service-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid #ccc;
+    transition: all 0.2s ease-in-out;
+}
+.service-card.best {
+    border-bottom-color: #28a745;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+.service-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+#wise .service-name { color: #00b9ff; }
+#remitly .service-name { color: #5cb85c; }
+#wu .service-name { color: #fec104; }
+#enbd .service-name { color: #7d244c; }
+
+.service-inputs label { display: block; font-size: 0.9rem; color: #666; margin-top: 10px; text-align: left; }
+.service-inputs input { width: 100%; box-sizing: border-box; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+.tax-field { margin-top: 10px; }
+.auto-vat { display: flex; align-items: center; margin-top: 5px; font-size: 0.8rem; color: #555; }
+.auto-vat input { width: auto; margin-right: 5px; }
+
+.service-result { margin-top: 15px; font-size: 1.1rem; }
+.service-result .final-inr { font-weight: 700; color: #333; font-size: 1.4rem; }
+.real-cost { margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 1rem; font-weight: 500; color: #dc3545; }
+.real-cost .cost-inr { font-weight: 700; }
+.service-card.best .real-cost { color: #28a745; }
+
+/* ... (all your existing CSS code before this) ... */
+
+/* --- NEW: Footer Styling --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}

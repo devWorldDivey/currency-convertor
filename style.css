@@ -6,7 +6,7 @@ body {
     padding: 20px;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1400px; /* Wider for 5 cards */
     margin: 0 auto;
     text-align: center;
 }
@@ -25,12 +25,11 @@ h1 { color: #1c1e21; }
     text-align: center;
 }
 #live-rate-display {
-    font-size: 1.5rem; /* Adjusted size */
+    font-size: 1.5rem;
     font-weight: 600;
     color: #004085;
     margin-bottom: 10px;
 }
-/* --- NEW STYLE for Benchmark Value --- */
 #mid-market-value-display {
     font-size: 1.2rem;
     font-weight: 500;
@@ -40,7 +39,6 @@ h1 { color: #1c1e21; }
     color: #004085;
     font-size: 1.4rem;
 }
-
 .rate-info { font-size: 0.9rem; color: #666; margin: 0; }
 .loader { display: inline-block; border: 4px solid #f3f3f3; border-radius: 50%; border-top: 4px solid #3498db; width: 20px; height: 20px; animation: spin 1s linear infinite; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -51,8 +49,8 @@ h1 { color: #1c1e21; }
 
 .comparison-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 .service-card {
     background: #fff;
@@ -76,10 +74,12 @@ h1 { color: #1c1e21; }
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
 }
-#wise .service-name { color: #00b9ff; }
 #remitly .service-name { color: #5cb85c; }
 #wu .service-name { color: #fec104; }
-#enbd .service-name { color: #7d244c; }
+#lulu .service-name { color: #003b71; }
+#alansari .service-name { color: #d6232a; }
+#hubpay .service-name { color: #4D4DFF; }
+
 
 .service-inputs label { display: block; font-size: 0.9rem; color: #666; margin-top: 10px; text-align: left; }
 .service-inputs input { width: 100%; box-sizing: border-box; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
@@ -93,13 +93,13 @@ h1 { color: #1c1e21; }
 .real-cost .cost-inr { font-weight: 700; }
 .service-card.best .real-cost { color: #28a745; }
 
-/* ... (all your existing CSS code before this) ... */
-
-/* --- NEW: Footer Styling --- */
+/* --- UPDATED: Footer Styling --- */
 footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    color: #888;
-    font-size: 0.9rem;
+    background-color: #000000; /* Black background */
+    color: #ffffff;             /* White font color */
+    font-size: 24px;           /* 24px font size */
+    border-radius: 8px;
 }

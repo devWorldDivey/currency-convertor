@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const liveRateDisplay = document.getElementById('live-rate-display');
     const aedAmountInput = document.getElementById('aedAmount');
     const serviceCards = document.querySelectorAll('.service-card');
-    // NEW: Selector for the benchmark value display
     const midMarketValueDisplay = document.getElementById('mid-market-value-display');
     
     let midMarketRate = 0;
@@ -17,20 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let lowestCost = Infinity;
         let bestCard = null;
 
-        // Calculate the value at the mid-market rate
         const midMarketValue = aedToSend * midMarketRate;
 
-        // NEW: Update the benchmark value display
         if (midMarketValue > 0) {
             midMarketValueDisplay.innerHTML = `Value at Market Rate: <strong>${midMarketValue.toLocaleString('en-IN', { maximumFractionDigits: 2 })} INR</strong>`;
         } else {
             midMarketValueDisplay.innerHTML = '';
         }
 
-        // Reset cards
         serviceCards.forEach(card => card.classList.remove('best'));
 
-        // Calculate for each service
         serviceCards.forEach(card => {
             const feeInput = card.querySelector('.fee');
             const taxInput = card.querySelector('.tax');
@@ -111,11 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 vatChecked: card.querySelector('.vat-checkbox').checked
             });
         });
-        localStorage.setItem('remittanceComparatorDataV3', JSON.stringify(dataToSave));
+        // Using a new key to avoid conflicts with old saved data
+        localStorage.setItem('remittanceComparatorDataV4', JSON.stringify(dataToSave));
     }
 
     function loadData() {
-        const savedData = JSON.parse(localStorage.getItem('remittanceComparatorDataV3'));
+        const savedData = JSON.parse(localStorage.getItem('remittanceComparatorDataV4'));
         if (savedData) {
             aedAmountInput.value = savedData.aedAmount;
             savedData.services.forEach(serviceData => {

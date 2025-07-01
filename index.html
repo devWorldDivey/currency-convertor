@@ -26,37 +26,13 @@
         </div>
 
         <div class="comparison-grid">
-            <div class="service-card" id="wise">
-                <h3 class="service-name">Wise</h3>
-                <div class="service-inputs">
-                    <label>Exchange Rate (1 AED = ? INR)</label>
-                    <input type="number" class="exchange-rate" step="0.0001" value="22.6626">
-                    <label>Fee (in AED)</label>
-                    <input type="number" class="fee" step="0.01" value="36.83">
-                    <div class="tax-field">
-                        <label>Tax on Fee (AED)</label>
-                        <input type="number" class="tax" step="0.01">
-                        <div class="auto-vat">
-                            <input type="checkbox" class="vat-checkbox" checked>
-                            <label>Auto-calc 5% VAT</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-result">
-                    <p>Recipient Gets: <span class="final-inr">0</span> INR</p>
-                </div>
-                <div class="real-cost">
-                    <p>Real Cost: <span class="cost-inr">...</span> INR</p>
-                </div>
-            </div>
-
             <div class="service-card" id="remitly">
                 <h3 class="service-name">Remitly</h3>
-                 <div class="service-inputs">
+                <div class="service-inputs">
                     <label>Exchange Rate (1 AED = ? INR)</label>
-                    <input type="number" class="exchange-rate" step="0.0001" value="22.55">
+                    <input type="number" class="exchange-rate" step="0.0001" value="23.37">
                     <label>Fee (in AED)</label>
-                    <input type="number" class="fee" step="0.01" value="7.00">
+                    <input type="number" class="fee" step="0.01" value="5.00">
                     <div class="tax-field">
                         <label>Tax on Fee (AED)</label>
                         <input type="number" class="tax" step="0.01">
@@ -78,9 +54,9 @@
                 <h3 class="service-name">Western Union</h3>
                  <div class="service-inputs">
                     <label>Exchange Rate (1 AED = ? INR)</label>
-                    <input type="number" class="exchange-rate" step="0.01" value="22.56">
+                    <input type="number" class="exchange-rate" step="0.01" value="23.24">
                     <label>Fee (in AED)</label>
-                    <input type="number" class="fee" step="0.01" value="9.90">
+                    <input type="number" class="fee" step="0.01" value="0.00">
                     <div class="tax-field">
                         <label>Tax on Fee (AED)</label>
                         <input type="number" class="tax" step="0.01">
@@ -98,8 +74,56 @@
                 </div>
             </div>
             
-            <div class="service-card" id="enbd">
-                <h3 class="service-name">Emirates NBD</h3>
+            <div class="service-card" id="lulu">
+                <h3 class="service-name">LuLu Money</h3>
+                 <div class="service-inputs">
+                    <label>Exchange Rate (1 AED = ? INR)</label>
+                    <input type="number" class="exchange-rate" step="0.01" placeholder="Check app for live rate">
+                    <label>Fee (in AED)</label>
+                    <input type="number" class="fee" step="0.01" value="10.00">
+                    <div class="tax-field">
+                        <label>Tax on Fee (AED)</label>
+                        <input type="number" class="tax" step="0.01">
+                        <div class="auto-vat">
+                            <input type="checkbox" class="vat-checkbox" checked>
+                            <label>Auto-calc 5% VAT</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-result">
+                    <p>Recipient Gets: <span class="final-inr">0</span> INR</p>
+                </div>
+                 <div class="real-cost">
+                    <p>Real Cost: <span class="cost-inr">...</span> INR</p>
+                </div>
+            </div>
+
+             <div class="service-card" id="alansari">
+                <h3 class="service-name">Al Ansari Exchange</h3>
+                 <div class="service-inputs">
+                    <label>Exchange Rate (1 AED = ? INR)</label>
+                    <input type="number" class="exchange-rate" step="0.01" placeholder="Check app for live rate">
+                    <label>Fee (in AED)</label>
+                    <input type="number" class="fee" step="0.01" value="15.00">
+                    <div class="tax-field">
+                        <label>Tax on Fee (AED)</label>
+                        <input type="number" class="tax" step="0.01">
+                        <div class="auto-vat">
+                            <input type="checkbox" class="vat-checkbox" checked>
+                            <label>Auto-calc 5% VAT</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-result">
+                    <p>Recipient Gets: <span class="final-inr">0</span> INR</p>
+                </div>
+                 <div class="real-cost">
+                    <p>Real Cost: <span class="cost-inr">...</span> INR</p>
+                </div>
+            </div>
+
+            <div class="service-card" id="hubpay">
+                <h3 class="service-name">Hubpay</h3>
                  <div class="service-inputs">
                     <label>Exchange Rate (1 AED = ? INR)</label>
                     <input type="number" class="exchange-rate" step="0.01" placeholder="Check app for live rate">
@@ -122,16 +146,11 @@
                 </div>
             </div>
         </div>
+
+        <footer>
+            <p>Made by Divey Anand</p>
+        </footer>
     </div>
     <script src="script.js"></script>
-	</div>
-    </div>
-
-    <footer>
-        <p>Made by Divey Anand</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
 </body>
 </html>

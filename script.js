@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Save and Load Data ---
+    // --- Save and Load Data (Updated for new layout) ---
     function saveData() {
         const dataToSave = {
             aedAmount: aedAmountInput.value,
@@ -107,11 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         // Using a new key to avoid conflicts with old saved data
-        localStorage.setItem('remittanceComparatorDataV4', JSON.stringify(dataToSave));
+        localStorage.setItem('remittanceComparatorDataV5', JSON.stringify(dataToSave));
     }
 
     function loadData() {
-        const savedData = JSON.parse(localStorage.getItem('remittanceComparatorDataV4'));
+        const savedData = JSON.parse(localStorage.getItem('remittanceComparatorDataV5'));
         if (savedData) {
             aedAmountInput.value = savedData.aedAmount;
             savedData.services.forEach(serviceData => {
